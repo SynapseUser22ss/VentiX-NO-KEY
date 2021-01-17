@@ -1,0 +1,270 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Venti = Instance.new("ScreenGui")
+local KeySystemMain = Instance.new("Frame")
+local Top = Instance.new("Frame")
+local Keytitle = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local EnterKey = Instance.new("TextButton")
+local KeyBox = Instance.new("TextBox")
+local Main = Instance.new("Frame")
+local MainTop = Instance.new("Frame")
+local MAINTITLE = Instance.new("TextLabel")
+local ExitMain = Instance.new("TextButton")
+local OWLHUB = Instance.new("TextButton")
+local FATHOMHUB = Instance.new("TextButton")
+local OPPRISONLIFEGUI = Instance.new("TextButton")
+local INFINITEYIELD = Instance.new("TextButton")
+local POTATOHUB = Instance.new("TextButton")
+local LEGACYHUB = Instance.new("TextButton")
+local MURDER = Instance.new("TextButton")
+local AURATUSX = Instance.new("TextButton")
+
+--Properties:
+
+Venti.Name = "Venti"
+Venti.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Venti.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+KeySystemMain.Name = "KeySystemMain"
+KeySystemMain.Parent = Venti
+KeySystemMain.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+KeySystemMain.BorderSizePixel = 0
+KeySystemMain.Position = UDim2.new(0.277037054, 0, 0.36807391, 0)
+KeySystemMain.Size = UDim2.new(0, 300, 0, 200)
+KeySystemMain.Active = true
+KeySystemMain.Draggable = true
+Main.Active = true
+Main.Draggable = true
+
+Top.Name = "Top"
+Top.Parent = KeySystemMain
+Top.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Top.BorderSizePixel = 0
+Top.Position = UDim2.new(0.000370381662, 0, -0.00192611699, 0)
+Top.Size = UDim2.new(0, 300, 0, 30)
+
+Keytitle.Name = "Keytitle"
+Keytitle.Parent = Top
+Keytitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keytitle.BackgroundTransparency = 1.000
+Keytitle.Size = UDim2.new(0, 299, 0, 30)
+Keytitle.Font = Enum.Font.GothamSemibold
+Keytitle.Text = "Venti Key Login"
+Keytitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Keytitle.TextSize = 14.000
+
+Exit.Name = "Exit"
+Exit.Parent = Top
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.Position = UDim2.new(0.913333356, 0, 0.0133331297, 0)
+Exit.Size = UDim2.new(0, 25, 0, 29)
+Exit.Font = Enum.Font.GothamSemibold
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextSize = 30.000
+Exit.MouseButton1Click:connect(function()
+	Main.Visible = false
+	KeySystemMain.Visible = false
+end)
+
+EnterKey.Name = "EnterKey"
+EnterKey.Parent = KeySystemMain
+EnterKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterKey.BackgroundTransparency = 1.000
+EnterKey.Position = UDim2.new(0, 0, 0.680000007, 0)
+EnterKey.Size = UDim2.new(0, 300, 0, 64)
+EnterKey.Font = Enum.Font.GothamSemibold
+EnterKey.Text = "Enter"
+EnterKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnterKey.TextSize = 30.000
+EnterKey.MouseButton1Click:connect(function()
+	if KeyBox.Text == "uAQ5akfY-sOdGwlYz" then
+		wait(1)
+		KeyBox.Text = "Valid Key"
+		wait(1)
+		Main.Visible = true
+		KeySystemMain.Visible = false
+		KeyBox.Text = ""
+	else
+		KeyBox.Text = "false key try again"
+		wait(2)
+		KeyBox.Text = ""
+	end
+end)
+
+KeyBox.Name = "KeyBox"
+KeyBox.Parent = KeySystemMain
+KeyBox.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+KeyBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.Position = UDim2.new(0.166666672, 0, 0.324999988, 0)
+KeyBox.Size = UDim2.new(0, 200, 0, 50)
+KeyBox.Font = Enum.Font.SourceSans
+KeyBox.PlaceholderText = "Key Here"
+KeyBox.Text = ""
+KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.TextSize = 14.000
+
+Main.Name = "Main"
+Main.Parent = Venti
+Main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.32296297, 0, 0.365435392, 0)
+Main.Size = UDim2.new(0, 400, 0, 250)
+Main.Visible = false
+
+MainTop.Name = "MainTop"
+MainTop.Parent = Main
+MainTop.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainTop.BorderSizePixel = 0
+MainTop.Position = UDim2.new(0, 0, -0.0019261475, 0)
+MainTop.Size = UDim2.new(0, 400, 0, 30)
+
+MAINTITLE.Name = "MAINTITLE"
+MAINTITLE.Parent = MainTop
+MAINTITLE.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MAINTITLE.BorderSizePixel = 0
+MAINTITLE.Position = UDim2.new(0, 0, 0.0160512291, 0)
+MAINTITLE.Size = UDim2.new(0, 399, 0, 29)
+MAINTITLE.Font = Enum.Font.GothamSemibold
+MAINTITLE.Text = "VentiX"
+MAINTITLE.TextColor3 = Color3.fromRGB(255, 255, 255)
+MAINTITLE.TextSize = 14.000
+
+ExitMain.Name = "ExitMain"
+ExitMain.Parent = MAINTITLE
+ExitMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExitMain.BackgroundTransparency = 1.000
+ExitMain.Position = UDim2.new(0.939290881, 0, -0.0200002044, 0)
+ExitMain.Size = UDim2.new(0, 25, 0, 29)
+ExitMain.Font = Enum.Font.GothamSemibold
+ExitMain.Text = "X"
+ExitMain.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExitMain.TextSize = 30.000
+ExitMain.MouseButton1Click:connect(function()
+	Main.Visible = false
+	KeySystemMain.Visible = false
+end)
+
+OWLHUB.Name = "OWL HUB"
+OWLHUB.Parent = Main
+OWLHUB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OWLHUB.BackgroundTransparency = 1.000
+OWLHUB.Position = UDim2.new(0.0392907709, 0, 0.763999879, 0)
+OWLHUB.Size = UDim2.new(0, 125, 0, 30)
+OWLHUB.Font = Enum.Font.GothamSemibold
+OWLHUB.Text = "OWL HUB"
+OWLHUB.TextColor3 = Color3.fromRGB(255, 255, 255)
+OWLHUB.TextSize = 20.000
+OWLHUB.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ZinityDrops/OwlHubLink/master/OwlHubBack.lua"))();
+
+
+end)
+
+
+FATHOMHUB.Name = "FATHOMHUB"
+FATHOMHUB.Parent = Main
+FATHOMHUB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FATHOMHUB.BackgroundTransparency = 1.000
+FATHOMHUB.Position = UDim2.new(0.0392907709, 0, 0.58799988, 0)
+FATHOMHUB.Size = UDim2.new(0, 125, 0, 30)
+FATHOMHUB.Font = Enum.Font.GothamSemibold
+FATHOMHUB.Text = "FATHOM HUB"
+FATHOMHUB.TextColor3 = Color3.fromRGB(255, 255, 255)
+FATHOMHUB.TextSize = 20.000
+FATHOMHUB.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/UmhaEvTT",true))()
+end)
+
+OPPRISONLIFEGUI.Name = "OPPRISONLIFEGUI"
+OPPRISONLIFEGUI.Parent = Main
+OPPRISONLIFEGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPPRISONLIFEGUI.BackgroundTransparency = 1.000
+OPPRISONLIFEGUI.Position = UDim2.new(0.0392907709, 0, 0.411999881, 0)
+OPPRISONLIFEGUI.Size = UDim2.new(0, 125, 0, 30)
+OPPRISONLIFEGUI.Font = Enum.Font.GothamSemibold
+OPPRISONLIFEGUI.Text = "OP PRIOSN LIFE GUI"
+OPPRISONLIFEGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+OPPRISONLIFEGUI.TextSize = 15.000
+OPPRISONLIFEGUI.TextWrapped = true
+OPPRISONLIFEGUI.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/EsC1JnBE", true))()
+end)
+
+INFINITEYIELD.Name = "INFINITEYIELD"
+INFINITEYIELD.Parent = Main
+INFINITEYIELD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INFINITEYIELD.BackgroundTransparency = 1.000
+INFINITEYIELD.Position = UDim2.new(0.0392907709, 0, 0.235999867, 0)
+INFINITEYIELD.Size = UDim2.new(0, 125, 0, 30)
+INFINITEYIELD.Font = Enum.Font.GothamSemibold
+INFINITEYIELD.Text = "INFINTE YIELD"
+INFINITEYIELD.TextColor3 = Color3.fromRGB(255, 255, 255)
+INFINITEYIELD.TextSize = 15.000
+INFINITEYIELD.TextWrapped = true
+INFINITEYIELD.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+POTATOHUB.Name = "POTATOHUB"
+POTATOHUB.Parent = Main
+POTATOHUB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+POTATOHUB.BackgroundTransparency = 1.000
+POTATOHUB.Position = UDim2.new(0.659290791, 0, 0.235999867, 0)
+POTATOHUB.Size = UDim2.new(0, 125, 0, 30)
+POTATOHUB.Font = Enum.Font.GothamSemibold
+POTATOHUB.Text = "POTATO HUB"
+POTATOHUB.TextColor3 = Color3.fromRGB(255, 255, 255)
+POTATOHUB.TextSize = 15.000
+POTATOHUB.TextWrapped = true
+POTATOHUB.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/SynapseUser22ss/PotatoHub/main/phub.lua'))()
+end)
+
+LEGACYHUB.Name = "LEGACYHUB"
+LEGACYHUB.Parent = Main
+LEGACYHUB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LEGACYHUB.BackgroundTransparency = 1.000
+LEGACYHUB.Position = UDim2.new(0.659290791, 0, 0.411999881, 0)
+LEGACYHUB.Size = UDim2.new(0, 125, 0, 30)
+LEGACYHUB.Font = Enum.Font.GothamSemibold
+LEGACYHUB.Text = "LEGACY HUB"
+LEGACYHUB.TextColor3 = Color3.fromRGB(255, 255, 255)
+LEGACYHUB.TextSize = 15.000
+LEGACYHUB.TextWrapped = true
+LEGACYHUB.MouseButton1Click:connect(function()
+	loadstring(game:GetObjects("rbxassetid://1683559539")[1].Source)()
+end)
+
+
+MURDER.Name = "MURDER"
+MURDER.Parent = Main
+MURDER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MURDER.BackgroundTransparency = 1.000
+MURDER.Position = UDim2.new(0.659290791, 0, 0.58799988, 0)
+MURDER.Size = UDim2.new(0, 125, 0, 30)
+MURDER.Font = Enum.Font.GothamSemibold
+MURDER.Text = "MURDER MYSERTY MOD MENU"
+MURDER.TextColor3 = Color3.fromRGB(255, 255, 255)
+MURDER.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Doggo-cryto/EclipseMM2/master/Script", true))()
+end)
+
+AURATUSX.Name = "AURATUSX"
+AURATUSX.Parent = Main
+AURATUSX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AURATUSX.BackgroundTransparency = 1.000
+AURATUSX.Position = UDim2.new(0.659290791, 0, 0.763999879, 0)
+AURATUSX.Size = UDim2.new(0, 125, 0, 30)
+AURATUSX.Font = Enum.Font.GothamSemibold
+AURATUSX.Text = "AURATUS X"
+AURATUSX.TextColor3 = Color3.fromRGB(255, 255, 255)
+AURATUSX.TextSize = 20.000
+AURATUSX.MouseButton1Click:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/mtrRP1H1", true))()
+end)
